@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-
+body {
+  background: #fafafa;
+}
 a {
   color: #000;
   text-decoration: none;
@@ -32,7 +34,7 @@ h3 {
 }
 
 .box {
-  background: #fafafa;
+  background: #fff;
   box-shadow: 1px 1px 8px 1px #cad1d9;
   border-radius: 5px;
 }
@@ -68,6 +70,7 @@ header,
 aside,
 .offer article .item {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
 /* MENU */
@@ -467,4 +470,5 @@ form input {
 }
 .publish form textarea {
   height: 100px;
+  border: 1px solid #d9e0eb;
 }
