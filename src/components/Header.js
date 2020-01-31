@@ -15,12 +15,14 @@ export default function Header(props) {
               </Link>
             </li>
             <li>
-              <button>
-                <span>
-                  <ion-icon name="add-circle-outline"></ion-icon>
-                </span>
-                Déposer une annonce
-              </button>
+              <Link to="/publish">
+                <button>
+                  <span>
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </span>
+                  Déposer une annonce
+                </button>
+              </Link>
             </li>
             <li>
               <span className="search">

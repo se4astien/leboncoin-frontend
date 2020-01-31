@@ -28,7 +28,7 @@ const SignUp = props => {
   }
   return (
     <div className="wrapper">
-      <div className="sign-up">
+      <div className="sign-up box">
         <div>
           <h1>Pourquoi créer un compte ?</h1>
           <div className="flex">

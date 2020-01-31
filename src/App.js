@@ -5,6 +5,7 @@ import "./App.css";
 import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
 import SignUp from "./containers/SignUp";
+import Publish from "./containers/Publish";
 import Header from "./components/Header";
 import LogIn from "./components/LogIn";
 import Footer from "./components/Footer";
@@ -56,6 +57,9 @@ function App() {
         </Route>
         <Route path="/user/sign_up">
           <SignUp setUser={setUser} />
+        </Route>
+        <Route path="/publish">
+          <Publish user={user} />
         </Route>
       </Switch>
       <Footer />

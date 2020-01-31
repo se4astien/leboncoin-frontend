@@ -31,8 +31,10 @@ h3 {
   max-width: 1200px;
 }
 
-.bg-grey {
-  background: #edeaea;
+.box {
+  background: #fafafa;
+  box-shadow: 1px 1px 8px 1px #cad1d9;
+  border-radius: 5px;
 }
 
 .center {
@@ -363,9 +365,6 @@ form input {
 }
 
 .sign-up {
-  background: #fafafa;
-  box-shadow: 1px 1px 8px 1px #cad1d9;
-  border-radius: 5px;
   margin: 50px 0;
   padding: 30px;
   display: flex;
@@ -441,5 +440,5 @@ form input {
   background-color: #f56b2a;
 }
 .disabled {
-  background-color: #4183d7;
+  background-color: #d7d7d8;
 }

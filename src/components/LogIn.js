@@ -8,6 +8,11 @@ const LogIn = props => {
   const [password, setPassword] = useState("");
   // Pour accéder à l'historique de navigation
   const history = useHistory();
+  let isEnabled = false;
+
+  if (email !== "" && password !== "") {
+    isEnabled = true;
+  }
   return (
     <div>
       <p className="title">Connexion</p>
@@ -24,25 +29,24 @@ const LogIn = props => {
               }
             );
 
-            if (response.data.token) {
+            if (response.data.token && isEnabled === true) {
               // 1. On sauvegarde le token dans les cookies
               Cookies.set("token", response.data.token); // "token" est le nom qu'on donne au cookie, response.data.token est l'endroit où il se situe dans l'API
               // 2. On ferme le modal
               props.setIsModalDisplayed(false);
               // 3. On met à jour l'état user
               props.setUser(response.data);
+              // 4. Naviguer vers la page d'accueil
+              history.push("/");
+              // Naviguer vers la page precedente
+              // history.goBack();
             } else {
-              alert("An error occured");
+              alert("Le formulaire n'est pas valide");
             }
           } catch (e) {
             alert(e.message);
           }
         }}
-        // Naviguer vers une autre page
-        // history.push("/offer/5dcc803be3e5c000154b03f2");
-
-        // Naviguer vers la page precedente
-        // history.goBack();
       >
         <label>Adresse e-mail</label>
         <input
