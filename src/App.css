@@ -442,3 +442,29 @@ form input {
 .disabled {
   background-color: #d7d7d8;
 }
+/*PUBLISH*/
+.publish {
+  margin: 50px 0;
+  padding: 20px;
+}
+.publish h1 {
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+  border-bottom: 3px solid #f56b2a;
+  padding-bottom: 30px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.publish form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+.publish form input {
+  margin: 10px 0;
+}
+.publish form textarea {
+  height: 100px;
+}

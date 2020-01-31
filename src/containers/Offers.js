@@ -36,7 +36,7 @@ export default function Offer() {
                   dateCreated.toLocaleDateString() +
                   " à " +
                   dateCreated.toLocaleTimeString();
-                return <Product {...item} date={date} />;
+                return <Product key={index} {...item} date={date} />;
               })}
             </ul>
           )}
