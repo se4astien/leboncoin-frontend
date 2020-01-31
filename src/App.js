@@ -55,7 +55,7 @@ function App() {
           />
         </Route>
         <Route path="/user/sign_up">
-          <SignUp />
+          <SignUp setUser={setUser} />
         </Route>
       </Switch>
       <Footer />
