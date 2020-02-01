@@ -77,23 +77,25 @@ const SignUp = props => {
               event.preventDefault();
               // Si tout est OK
               if (isEnabled === true) {
-                // 1. On appelle le serveur pour créer un compte
-                const response = await axios.post(
-                  "https://leboncoin-api.herokuapp.com/api/user/sign_up",
-                  {
-                    username: username,
-                    email: email,
-                    password: password
-                  }
-                );
-                // 2. Enregistre le token dans les cookies
-                Cookies.set("token", response.data.token);
-
-                // 3. On change l'état user qui se trouve dans App.js
-                props.setUser(response.data);
-
-                // 4. On redirige vers la page d'accueil
-                history.push("/");
+                try {
+                  // 1. On appelle le serveur pour créer un compte
+                  const response = await axios.post(
+                    "https://leboncoin-api.herokuapp.com/api/user/sign_up",
+                    {
+                      username: username,
+                      email: email,
+                      password: password
+                    }
+                  );
+                  // 2. Enregistre le token dans les cookies
+                  Cookies.set("token", response.data.token);
+                  // 3. On change l'état user qui se trouve dans App.js
+                  props.setUser(response.data);
+                  // 4. On redirige vers la page d'accueil
+                  history.push("/");
+                } catch (err) {
+                  console.log("An error occured");
+                }
               } else {
                 alert("Le formulaire n'est pas valide");
               }

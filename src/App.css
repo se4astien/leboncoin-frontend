@@ -358,13 +358,16 @@ form label {
   font-size: 16px;
   line-height: 19px;
 }
-form input {
+form input,
+textarea {
   background: #ffffff;
   border: 1px solid #d9e0eb;
   box-sizing: border-box;
   border-radius: 5px;
   height: 44px;
   padding: 10px;
+  font-size: 1rem;
+  color: #777;
 }
 
 .sign-up {
@@ -444,6 +447,7 @@ form input {
 }
 .disabled {
   background-color: #d7d7d8;
+  cursor: not-allowed;
 }
 /*PUBLISH*/
 .publish {

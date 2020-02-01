@@ -12,6 +12,12 @@ const Publish = props => {
   // Pour accéder à l'historique de navigation
   const history = useHistory();
 
+  let isEnabled = false;
+
+  // Si tous les champs sont remplis
+  if (title && description && price && file) {
+    isEnabled = true;
+  }
   // SI pas connecté
   console.log(props.user); // renvoie l'objet token
   console.log(props.user.token); // undefined
@@ -40,30 +46,33 @@ const Publish = props => {
                 data.append("price", price);
                 data.append("description", description);
 
-                // tout ce qui concerne les requetes se trouve dans un try/catch !!!
-                try {
-                  const response = await axios.post(
-                    "https://leboncoin-api.herokuapp.com/api/offer/publish", // url de la requete
-                    data, // body de l'API
-                    {
-                      // headers est un objet => est-ce que la personne qui fait la requete est bien autorisé à la faire ?
-                      headers: {
-                        Authorization: "Bearer " + props.user.token,
-                        "Content-Type": "multipart / form - data" // cette ligne est optionnelle
+                if (isEnabled === true) {
+                  // tout ce qui concerne les requetes se trouve dans un try/catch !!!
+                  try {
+                    const response = await axios.post(
+                      "https://leboncoin-api.herokuapp.com/api/offer/publish", // url de la requete
+                      data, // body de l'API
+                      {
+                        // headers est un objet => est-ce que la personne qui fait la requete est bien autorisé à la faire ?
+                        headers: {
+                          Authorization: "Bearer " + props.user.token,
+                          "Content-Type": "multipart / form - data" // cette ligne est optionnelle
+                        }
                       }
-                    }
-                  );
-                  // On va directement sur la page d'offre concerné
-                  history.push("/offer/" + response.data._id);
-                } catch (err) {
-                  console.log("An error occured");
+                    );
+                    // On va directement sur la page d'offre concernée
+                    history.push("/offer/" + response.data._id);
+                  } catch (err) {
+                    console.log("An error occured");
+                  }
+                } else {
+                  alert("Le formulaire n'est pas valide");
                 }
               }}
             >
               <label>Titre de l'annonce *</label>
               <input
                 type="text"
-                placeholder="Le titre de votre annonce"
                 onChange={event => {
                   setTitle(event.target.value);
                 }}
@@ -91,7 +100,11 @@ const Publish = props => {
                   setFile(event.target.files[0]);
                 }}
               />
-              <input type="submit" value="Valider" />
+              <input
+                className={isEnabled ? "enabled" : "disabled"}
+                type="submit"
+                value="Valider"
+              />
             </form>
           </>
         )}
