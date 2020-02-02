@@ -18,6 +18,8 @@ https://leboncoin-with-react.netlify.com/
 
 ## Screenshots
 
+![](https://github.com/se4astien/leboncoin-frontend/blob/master/src/screenshots/leboncoin-01.png)
+![github-small](https://github.com/se4astien/leboncoin-frontend/blob/master/src/screenshots/leboncoin-03.png)
 
 
 
