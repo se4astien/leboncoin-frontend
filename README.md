@@ -18,7 +18,6 @@ https://leboncoin-with-react.netlify.com/
 
 ## Screenshots
 
-![github-small](screenshots/leboncoin-01.png)
 
 
 
