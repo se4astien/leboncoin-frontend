@@ -1,4 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Leboncoin : Fullstack Project with REACT and Node.js
+
+React website clone 'leboncoin' with authentication. 
+You can login if you have an account or you can create one. 
+
+User can search and post offers, upload of pictures with cloudinary. Results with paging for the offers fetched.
+
+## Installation
+
+```javascript
+npx create-react-app
+```
+
+## Deployment
+
+Deploy on Netlify : 
+https://leboncoin-with-react.netlify.com/
+
+
+
+
 
 ## Available Scripts
 
