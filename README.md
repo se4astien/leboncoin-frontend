@@ -1,6 +1,6 @@
 # Leboncoin
 
-React website clone 'leboncoin' with authentication.
+React website clone 'leboncoin' with authentication. You can login if you have an account or you can create one.
 User can search and post offers, upload of pictures with cloudinary.
 Results with paging for the offers fetched.
 
