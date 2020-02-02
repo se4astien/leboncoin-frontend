@@ -1,3 +1,22 @@
+# Leboncoin
+
+React website clone 'leboncoin' with authentication.
+User can search and post offers, upload of pictures with cloudinary.
+Results with paging for the offers fetched.
+
+## Installation
+
+```javascript
+npx create-react-app
+```
+
+## Deployment
+
+Deploy on Netlify : 
+https://leboncoin-with-react.netlify.com/
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
